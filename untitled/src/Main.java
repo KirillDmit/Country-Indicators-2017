@@ -1,3 +1,4 @@
+import com.opencsv.exceptions.CsvException;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.plot.PlotOrientation;
@@ -13,7 +14,8 @@ import java.util.Map;
 public class Main {
     public static Connection connection;
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException, CsvException {
+        Parser.parse();
         Task1();
     }
 
