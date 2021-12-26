@@ -18,20 +18,19 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class Parser {
-    public static Connection connection;
     public static void parse() throws IOException, CsvException {
         var fileName = "Happiness index by country 2017.csv";
         var dbName = "data.db";
         Path path = Paths.get(fileName);
         CSVParser parser = new CSVParserBuilder().withSeparator(',').build();
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:" + dbName);
+            Main.connection = DriverManager.getConnection("jdbc:sqlite:" + dbName);
             try{
                 var br = Files.newBufferedReader(path, StandardCharsets.UTF_8);
                 var reader = new CSVReaderBuilder(br).withCSVParser(parser).build();
                 var rows = reader.readAll();
                 rows.remove(0);
-                var statement = connection.createStatement();
+                var statement = Main.connection.createStatement();
                 ResultSet resultSet = statement.executeQuery("SELECT COUNT(*) FROM data");
                 if(resultSet.getInt(1) != rows.size())
                     Data.fillDB((ArrayList<String[]>) rows);
