@@ -48,7 +48,7 @@ public class Data {
 
     private static void addData(Data data){
         try{
-            PreparedStatement insertStatement = Parser.connection.prepareStatement(
+            PreparedStatement insertStatement = Main.connection.prepareStatement(
                     "INSERT INTO data (country, region, happinessRank, happinessScore, whiskerHigh, whiskerLow, economyGdpPerCap, family, health, freedom, generosity, trustGovernment, dystopiaResidual) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             );
             insertStatement.setString(1, data.country);
