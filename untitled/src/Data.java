@@ -42,7 +42,9 @@ public class Data {
             data.generosity = Double.parseDouble(row[10]);
             data.trustGovernment = Double.parseDouble(row[11]);
             data.dystopiaResidual = Double.parseDouble(row[12]);
-
+            dataList.add(data);
+            addData(dataList.get(i));
+            System.out.println("id: " + i + "Add Data");
         }
     }
 
