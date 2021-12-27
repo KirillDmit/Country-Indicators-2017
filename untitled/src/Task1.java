@@ -23,7 +23,7 @@ public class Task1 {
                 dataSet.addValue(res.get(key), key, "");
             var barChart = ChartFactory.createBarChart(
                     "График по показателю здоровья",
-                    "Название страны",
+                    "Количество стран в регионе",
                     "Показатель здоровья",
                     dataSet,
                     PlotOrientation.VERTICAL,
