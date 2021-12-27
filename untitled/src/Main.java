@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) throws IOException, CsvException {
         Parser.parse();
         Task1.run();
-        //Task2();
-        //Task3();
+        Task2.run();
+        Task3.run();
     }
 }
