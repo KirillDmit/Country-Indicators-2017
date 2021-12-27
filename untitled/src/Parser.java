@@ -16,6 +16,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Parser {
     public static void parse() throws IOException, CsvException {
@@ -33,7 +34,7 @@ public class Parser {
                 var statement = Main.connection.createStatement();
                 ResultSet resultSet = statement.executeQuery("SELECT COUNT(*) FROM data");
                 if(resultSet.getInt(1) != rows.size())
-                    Data.fillDB((ArrayList<String[]>) rows);
+                    Data.fillDB(new LinkedList<>(rows));
             } catch (IOException e){
                 e.printStackTrace();
             }
