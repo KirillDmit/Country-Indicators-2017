@@ -14,7 +14,7 @@ import java.util.Map;
 public class Task1 {
 
     public static void run(){
-        Map<String, Integer> res;
+        Map<String, Double> res;
         try {
             var statement = Main.connection.createStatement();
             res = getTask1Data(statement);
@@ -39,18 +39,18 @@ public class Task1 {
         }
     }
 
-    private static Map<String, Integer> getTask1Data(Statement statement){
-        Map<String, Integer> res = new HashMap<>();
+    private static Map<String, Double> getTask1Data(Statement statement){
+        Map<String, Double> res = new HashMap<>();
         try{
-            ResultSet rs = statement.executeQuery("SELECT COUNT(*) health FROM data GROUP BY health ORDER BY health");
+            ResultSet rs = statement.executeQuery("SELECT COUNT(*), health FROM data GROUP BY region ORDER BY health");
             while(rs.next()){
-                if(!rs.getString(2).equals(""))
-                    res.put(rs.getString(2), rs.getInt(1));
+                if(!rs.getString(1).equals(""))
+                    res.put(rs.getString(1), rs.getDouble(2));
             }
         } catch (SQLException e){
             e.printStackTrace();
         }
-        Map<String, Integer> resSorted = new HashMap<>();
+        Map<String, Double> resSorted = new HashMap<>();
         resSorted.putAll(res);
         return resSorted;
     }
