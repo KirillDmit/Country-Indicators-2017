@@ -1,13 +1,7 @@
-import java.awt.dnd.DropTarget;
-import java.awt.image.AreaAveragingScaleFilter;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Data {
     private String country;
@@ -24,7 +18,7 @@ public class Data {
     private double trustGovernment;
     private double dystopiaResidual;
 
-    public static void fillDB(ArrayList<String[]> rows){
+    public static void fillDB(LinkedList<String[]> rows){
         ArrayList<Data> dataList  = new ArrayList<>();
         for(int i = 0; i < rows.size(); i++){
             var data = new Data();
