@@ -1,5 +1,5 @@
 # Country-Indicators-2017
-The final project for the Java course
+*The final project for the Java course*
 
 Для парсинга CSV-файла была применена библиотека OpenCSV
 
@@ -7,16 +7,17 @@ The final project for the Java course
 
 Для построения графиков была применена библиотека JFreeChart
 
+________
 
-
-Задача 1
+**Задача 1**
 
 Сформированный график по показателю здоровья. Страны объединены по регионам
 
 ![image](https://user-images.githubusercontent.com/90722253/147486063-fef3e382-8dd9-4bbe-8159-b0f1e438d4ba.png)
 
+______
 
-Задача 2
+**Задача 2**
 
 Выведенное в консоль значение среднего показателя здоровья среди Western Europe и Sub-Saharan Africa
 
@@ -26,9 +27,9 @@ The final project for the Java course
 
 ![image](https://user-images.githubusercontent.com/90722253/147486558-c9dafb40-c1c9-4ced-9d0f-912d4e738b81.png)
 
+_______
 
-
-Задача 3
+**Задача 3**
 
 Вывод в консоль найденной страны с самым средним показателем уровня здоровья среди Western Europe и Sub-Saharan Africa
 
