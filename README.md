@@ -1,6 +1,10 @@
 # Country-Indicators-2017
 The final project for the Java course
 
+Для парсинга CSV-файла была применена библиотека OpenCSV
+Для работы с Базой Данных испозьзовалась СУБД SQLite
+Для построения графиков была применена библиотека JFreeChart
+
 Задача 1
 
 Сформированный график по показателю здоровья. Страны объединены по регионам
@@ -14,7 +18,7 @@ The final project for the Java course
 
 ![image](https://user-images.githubusercontent.com/90722253/147486243-44157306-baa0-43f7-b895-0e3cf2cbc1db.png)
 
-Проверка корректности запроса через запрос напрямую
+Проверка
 
 ![image](https://user-images.githubusercontent.com/90722253/147486558-c9dafb40-c1c9-4ced-9d0f-912d4e738b81.png)
 
@@ -26,7 +30,7 @@ The final project for the Java course
 
 ![image](https://user-images.githubusercontent.com/90722253/147486412-9de0dd9f-daca-4fdb-af43-373ec4f67ffd.png)
 
-Проверка корректности запроса через запрос напрямую
+Проверка
 
 ![image](https://user-images.githubusercontent.com/90722253/147486583-c499dc9d-7e1f-4e8c-ba60-35daa78b1625.png)
 
